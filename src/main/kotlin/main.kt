@@ -33,16 +33,29 @@ fun main(){
 //    }
 //    println(sayHelloZoro("Zoro", 1996))
     //%%%%%%%%%%%%%%%%%%%%5.6  Using type inference%%%%%%%%%%%%%%%%%%%%
-    val sayHelloZoro ={favoriteAnime :String,releaseDate:Int ->
-        "$favoriteAnime is  $Queen's favorite animetion in 2000 it was  released in $releaseDate"
+    //val sayHelloZoro ={favoriteAnime :String,releaseDate:Int ->
+      //  "$favoriteAnime is  $Queen's favorite animetion in 2000 it was  released in $releaseDate"
 
-    }
-    println(sayHelloZoro("Zoro", 1996))
+  //  }
+    //println(sayHelloZoro("Zoro", 1996))
+    //println(favoriteStuff("kpop",sayHelloZoro))
 
-    println(favoriteStuff("kpop",sayHelloZoro))
+    //%%%%%%%%%%%%%%%%%%%%5.8  Passing a trailing lambda%%%%%%%%%%%%%%%%%%%%
 
+//    favoriteStuff("kpop"){favoriteAnime :String ,releaseDate:Int ->
+//       " $favoriteAnime is  $Queen's favorite animetion in 2000 it was  released in $releaseDate"
+//    }
+//5.12
+//    favoriteStuff("kpop", ::favoriteAnimal ){favoriteAnime :String ,releaseDate:Int ->
+//       " $favoriteAnime is  $Queen's favorite animetion in 2000 it was  released in $releaseDate"
+//end of main\\
 }
-fun favoriteStuff (music:String ,sayHello:(String,Int)->String):String{
+//5.9
+ fun favoriteStuff (music:String ,sayHello:(String,Int)->String):String{
     var character = sayHello("Zoro", 1996)
 return "$music is Nora's favorite music and $character"
+}
+fun favoriteAnimal(animal :String ){
+    println("Nora's favorite Animal is $animal")
+
 }
