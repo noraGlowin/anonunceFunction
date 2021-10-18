@@ -40,8 +40,9 @@ fun main(){
     println(sayHelloZoro("Zoro", 1996))
 
     println(favoriteStuff("kpop",sayHelloZoro))
+
 }
-fun favoriteStuff (music:String ,sayHelloZoro:(String,Int)->String):String{
-    var zoro = sayHelloZoro("Zoro", 1996)
-return "$music is Nora's favorite music and $zoro"
+fun favoriteStuff (music:String ,sayHello:(String,Int)->String):String{
+    var character = sayHello("Zoro", 1996)
+return "$music is Nora's favorite music and $character"
 }
